@@ -1,4 +1,4 @@
-let img = 'http://test.miudrive.com/images/carchat/';
+let img = 'http';
 
 let config = {
     miumoney : img + 'miumoney.png',

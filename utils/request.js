@@ -1,7 +1,7 @@
 //请求方法的封装 
 
 let host = 'https';
-let order = 'https';
+let order = 'http';
 let didi = 'https'; //这个是获取的车型 测试api和正式api相同
 let payment = 'https';
 let cms = 'https';

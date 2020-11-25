@@ -44,7 +44,7 @@ Component({
       params = obj;
       params.user_id = this.data.user_id;
       wx.request({
-        url: 'httpsm' + url,
+        url: 'http' + url,
         data: params,
         method: 'POST',
         success(res) {
