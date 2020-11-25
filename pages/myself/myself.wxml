@@ -1,0 +1,43 @@
+<view class="host">
+    <!-- 顶部导航栏 -->
+    <view class="back">
+        <view class="nav-bar" style="height:{{navBarHeight}}px">
+            <view class="search" style="height:{{menuHeight}}px; min-height:{{menuHeight}}px; line-height:{menuHeight}}px; left:{{menuRight}}px; bottom:{{menuBotton}}px;">
+                <text>个人中心</text>
+            </view>
+        </view>
+        <!-- 已登录 -->
+        <view class="users" bindtap='userinfos' wx:if="{{userInfo}}">
+            <view class="user_photo">
+                <image src="{{userInfo.avatarUrl}}" />
+            </view>
+            <text>{{nickName}}</text>
+            <text class="theid" wx:if="{{userdata}}">ID: {{userdata.user_id}}</text>
+        </view>
+         <!-- 未登录 -->
+        <view class="the_button" wx:else>
+            <button open-type="getUserInfo" bindgetuserinfo="getUserInfo" style="color:black">
+                点击登录
+            </button>
+        </view>
+    </view>
+    <!-- 内容 -->
+    <view class="cont">
+        <view class="cont_box" wx:for="{{actlist}}" data-index='{{index}}' bindtap='topage' wx:key="*this">
+            <view class="left_box">
+                <image src="{{item.url}}" />
+                <text>{{item.name}}</text>
+            </view>
+            <view>
+                <!-- 已登录展示的喵币、收藏、历史声优的头像 -->
+                <view wx:if="{{userInfo}}">
+                    <text class="moneys" wx:if="{{index==0}}">{{my_money}}</text>
+                    <!-- <view wx:else class="right_img">
+                        <image src="{{item.url}}" wx:for="{{actlist}}" wx:key="*this" />
+                    </view> -->
+                </view>
+                <image src="{{rights}}" class="the_rights" />
+            </view>
+        </view>
+    </view>
+</view>

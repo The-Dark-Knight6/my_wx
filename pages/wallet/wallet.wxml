@@ -1,0 +1,48 @@
+<view class="host">
+    <!-- 导航栏 -->
+    <navigation-bar defaultdata="{{title}}"></navigation-bar>
+      <!-- wxs处理 for循环中的变量逻辑 -->
+    <wxs src="../../utils/our.wxs" module="changeitem"></wxs>
+    <!-- 登录 页面内容-->
+    <view wx:if="{{userdata && arrlength && !out}}">
+        <view class="cont">
+            <view class="banner">
+                <view class="ban_left">
+                    <image src="{{money}}" />
+                    <text>我的喵币</text>
+                </view>
+                <text>{{my_money}}</text>
+            </view>
+            <!-- 切换 -->
+            <view class="the_nav">
+                <view wx:for="{{arr}}" bindtap='change_tab' data-index='{{index}}' wx:key="*this">
+                    <text class="{{ischeck == index ? 'act' : 'normal'}}">{{item.name}}</text>
+                </view>
+            </view>
+            <!-- 列表 -->
+            <view class="the_list" wx:if="{{nodata}}">
+                <view class="list_box" wx:for="{{arrlist}}" wx:key="*this">
+                    <view class="li_name" class="{{item.business_type == 0 ? 'normal_color' : 'act_color'}}">
+                        {{item.order_name}}
+                    </view>
+                    <view class="list_content">
+                        <view class="li_right">
+                            <text>{{item.create_time}}</text>
+                            <text>{{changeitem.formatSeconds(item.order_time)}}</text>
+                            <text>{{item.gift_name}}</text>
+                        </view>
+                        <view class="{{item.business_type == 0 ? 'normal_color' : 'act_color'}}">
+                            {{item.business_type == 0 ? '+' : '-'}}{{item.cash}}
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="the_list" wx:else>暂无数据</view>
+        </view>
+    </view>
+    <!-- 未登录 -->
+    <view class="boximg" wx:else>
+        <image src="{{no_money}}" />
+        <view>没有喵币记录~~</view>
+    </view>
+</view>

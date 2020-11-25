@@ -1,0 +1,115 @@
+page {
+    background-color: rgb(245, 245, 245);
+}
+
+.host {}
+
+.back {
+    background: url('http://test.miudrive.com/images/carchat/myback.png') no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 400rpx;
+    box-sizing: border-box;
+}
+
+.nav-bar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    color: #fff;
+}
+
+.nav-bar .search {
+    width: 95%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.the_button {
+    position: absolute;
+    top: 180rpx;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+}
+
+.the_button button {
+    font-weight: lighter;
+}
+
+.cont {
+    padding: 0 5%;
+}
+
+.cont_box {
+    background-color: white;
+    border-radius: 100rpx;
+    padding: 45rpx 50rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50rpx;
+}
+
+.left_box image {
+    width: 45rpx;
+    height: 45rpx;
+    margin-right: 18rpx;
+}
+
+.cont_box view {
+    display: flex;
+    place-items: center;
+}
+
+.users {
+    position: absolute;
+    top: 150rpx;
+    left: 50rpx;
+    color: white;
+}
+
+.theid {
+    position: absolute;
+    bottom: 0;
+    left: 140rpx;
+    color: #ccc;
+    font-size: 25rpx;
+    white-space: nowrap;
+}
+
+.user_photo {
+    width: 120rpx;
+    height: 120rpx;
+    margin-right: 20rpx;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.user_photo image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.moneys {
+    margin-right: 10rpx;
+    color: #999999;
+}
+
+.right_img image {
+    width: 45rpx;
+    margin-right: -20rpx;
+    height: 45rpx;
+}
+
+.right_img {
+    margin-right: 30rpx;
+}
+
+.the_rights {
+    width: 30rpx;
+    height: 30rpx;
+}

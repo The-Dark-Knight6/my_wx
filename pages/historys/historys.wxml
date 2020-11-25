@@ -1,0 +1,39 @@
+<view class="host">
+    <!-- 导航栏 -->
+    <navigation-bar defaultdata="{{title}}"></navigation-bar>
+    <!-- wxs处理 for循环中的变量逻辑 -->
+    <wxs src="../../utils/our.wxs" module="changeitem"></wxs>
+    <!-- 内容 -->
+    <view class="home">
+        <!-- 登录 -->
+        <view wx:if="{{userdata && arrlength && !out}}">
+            <view wx:for="{{dataarr}}" class="{{item.anchor.sex == 1 ? 'li_box_boy' : 'li_box_girl'}}">
+                <!-- 左侧 -->
+                <view class="box_left">
+                    <view class="left_pic">
+                        <image src="{{item.anchor.avatar_url}}" />
+                    </view>
+                    <view class="left_info">
+                        <view class="the_name">
+                            <text>{{item.anchor.name}}</text>
+                            <image src="{{item.anchor.sex == 1 ? boy : girl}}" />
+                        </view>
+                        <view>ID:{{item.anchor.anchor_id}}</view>
+                        <view>{{item.anchor.voiceType.name}}</view>
+                    </view>
+                </view>
+                <!-- 右侧 -->
+                <view class="box_right">
+                    <view>连麦时间：{{changeitem.timestampToTime(item.link_start)}}</view>
+                    <view>连麦时长：{{changeitem.formatSeconds(item.duration)}}</view>
+                    <view>消费喵币：{{item.trade_amount}}</view>
+                </view>
+            </view>
+        </view>
+        <!-- 未登录 -->
+        <view class="boximg" wx:else>
+            <image src="{{chatting}}" />
+            <view>您还没有和声优连麦过哦~</view>
+        </view>
+    </view>
+</view>

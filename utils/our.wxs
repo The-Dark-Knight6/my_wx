@@ -1,0 +1,51 @@
+//处理渲染时候的数据变量逻辑 
+//小程序默认开发不支持es6 需要手动开启或关闭 --2020/11/2
+
+// 将秒转化为时：分：秒
+function formatSeconds(val) {
+    if (val) {
+        var day = Math.floor(val / (24 * 3600)); // Math.floor()向下取整 
+        var hour = Math.floor((val - day * 24 * 3600) / 3600);
+        var minute = Math.floor((val - day * 24 * 3600 - hour * 3600) / 60);
+        var second = val - day * 24 * 3600 - hour * 3600 - minute * 60;
+        //当小时 、 分钟数为零时候的处理
+        if (hour) {
+            return hour + "时" + minute + "分";
+        } else if (minute) {
+            return minute + "分" + second + '秒';
+        } else {
+            return second + '秒';
+        }
+    } else {
+        return '';
+    }
+}
+
+// 时间戳转化为正常时间格式
+function timestampToTime(timestamp) {
+    if (timestamp) {
+        //时间戳为10位需*1000，时间戳为13位的话不需乘1000
+        var date = getDate(timestamp * 1000);
+        // var year = date.getFullYear() + '-';
+        var month = date.getMonth() >= 10 ? date.getMonth() + 1 + '-' : '0' + date.getMonth() + 1 + '-';
+        var day = date.getDate() >= 10 ? date.getDate() + ' ' : '0' + date.getDate() + ' ';
+        var hour = date.getHours() >= 10 ? date.getHours() + ':' : '0' + date.getHours() + ':';
+        var m = date.getMinutes() >= 10 ? date.getMinutes() + ':' : '0' + date.getMinutes() + ':';
+        var s = date.getSeconds() >= 10 ? date.getSeconds() : '0' + date.getSeconds();
+        return month + day + hour + m + s;
+    } else {
+        return '未知';
+    }
+}
+
+//过滤车型图片 给图片加上url前缀
+function theimg(val) {
+    console.log(val)
+    return "https://srctest.didi365.com/didi365" + val;
+}
+
+module.exports = {
+    formatSeconds: formatSeconds,
+    timestampToTime: timestampToTime,
+    theimg: theimg
+}

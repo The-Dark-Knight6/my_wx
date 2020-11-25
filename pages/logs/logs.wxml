@@ -1,0 +1,14 @@
+<!--logs.wxml-->
+<!-- <view class="container log-list">
+  <block wx:for="{{logs}}" wx:for-item="log">
+    <text class="log-item">{{index + 1}}. {{log}}</text>
+  </block>
+</view> -->
+<view class="host">
+    <!-- 导航栏 -->
+    <navigation-bar defaultdata="{{title}}"></navigation-bar>
+    <!-- 登录 页面内容 -->
+    <view class="home">
+         <web-view src="{{the_page}}"></web-view>
+    </view>
+</view>

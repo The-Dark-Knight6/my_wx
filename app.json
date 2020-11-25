@@ -1,0 +1,41 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/myself/myself",
+    "pages/logs/logs",
+    "pages/wallet/wallet",
+    "pages/collect/collect",
+    "pages/historys/historys",
+    "pages/brands/brands",
+    "pages/people/people"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "车载语聊",
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "custom",
+    "onReachBottomDistance":50
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "custom": true,
+    "position": "bottom",
+    "selectedColor": "#3874ff",
+    "list": [{
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/homed.png"
+      },
+      {
+        "pagePath": "pages/myself/myself",
+        "text": "我的",
+        "iconPath": "images/my.png",
+        "selectedIconPath": "images/myed.png"
+      }
+    ]
+  },
+  "usingComponents": {}
+}

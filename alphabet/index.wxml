@@ -1,0 +1,28 @@
+<scroll-view scroll-y style="height: {{windowHeight}}px;margin-top: 180rpx;" scroll-into-view="{{alpha}}">
+  <view class="alphabet">
+    <view class="alphabet-list">
+      <view wx:for="{{list}}" wx:key="unique" id="{{item.alphabet == '热' ? 'h' : item.alphabet}}" class="section-item">
+        <view class="section-item-header">{{item.alphabet}}</view>
+        <view wx:for="{{item.datas}}" wx:key="unique" wx:for-item="cell" wx:for-index="cellIndex" class="section-item-cells" bindtap="tapindex" data-index="{{cell.name}}">
+          <view class="section-item-cell {{cellIndex != (item.datas.length-1) ? 'border-bottom':''}}">
+            <image class='avater' src='https://srctest.didi365.com/didi365{{cell.avater}}'></image>
+            <!-- <image class='avater' src='{{cell.avater}}'></image> -->
+            <text>{{cell.name}}</text>
+          </view>
+          <view wx:for="{{cell.model}}" wx:for-item="theitem" class="thebox" style="display:{{myindex == cell.name ? 'block' : 'none'}}" bindtap="getbrand" data-model="{{theitem}}" data-brand="{{cell}}" data-tag="{{item.alphabet}}">
+            <view>{{theitem.modelname}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</scroll-view>
+
+<!-- <view data-id="selector" catchtouchstart="handlerAlphaTap" catchtouchmove="handlerMove" catchtouchend='handlerEnd' class="alphanet-selector {{addBg?'bg':''}}"> -->
+<view data-id="selector" catchtouchstart="handlerAlphaTap" catchtouchend='handlerEnd' class="alphanet-selector {{addBg?'bg':''}}">
+  <view data-ap="{{item.alphabet == '热' ? 'h' : item.alphabet}}" wx:for="{{list}}" wx:key="unique" class="selector-one">
+    {{item.alphabet}}
+  </view>
+</view>
+
+<view wx:if="{{addBg}}" class='show-alpha'>{{alpha}}</view>

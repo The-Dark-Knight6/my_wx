@@ -1,0 +1,6 @@
+<view class="host" wx:if="{{show}}" style='padding-bottom:{{btuBottom}}'>
+    <view class="tabbox" wx:for="{{tab}}" data-path='{{item.pagePath}}' data-index='{{index}}' bindtap='switchTab' wx:key="*this">
+        <image src="{{selected == index ? item.selectedIconPath : item.iconPath}}" />
+        <text style="color:{{selected == index ? selectedColor : color}}">{{item.text}}</text>
+    </view>
+</view>

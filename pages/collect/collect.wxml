@@ -1,0 +1,39 @@
+<view class="host">
+    <!-- 导航栏 -->
+    <navigation-bar defaultdata="{{title}}"></navigation-bar>
+    <!-- 内容 -->
+    <view class="home">
+        <!-- 登录 -->
+        <view wx:if="{{userdata && arrlength && !out}}">
+            <view wx:for="{{arrdata}}" class="{{item.anchor.sex == 1 ? 'li_box_boy' : 'li_box_girl'}}">
+                <!-- 左侧 -->
+                <view class="box_left">
+                    <view class="left_pic">
+                        <image src="{{item.anchor.avatar_url}}" />
+                    </view>
+                    <view class="left_info">
+                        <view class="the_name">
+                            <text>{{item.anchor.name}}</text>
+                            <image src="{{item.anchor.sex == 1 ? boy : girl}}" />
+                        </view>
+                        <view>ID:{{item.anchor.anchor_id}}</view>
+                        <view>{{item.anchor.voiceType.name}}</view>
+                    </view>
+                </view>
+                <!-- 右侧 -->
+                <view class="box_right">
+                    <view class="music" bindtap="play_music" data-src="{{item.anchor.voice.url}}" data-index='{{item.anchor.voice.file_id}}'>
+                        <image src="{{item.anchor.voice.file_id == clcikindex ? gplayed : g_play}}" />
+                        <text>试听</text>
+                    </view>
+                </view>
+            </view>
+            <view class="onlytw" hidden="{{onlynum}}">我的收藏仅展示12个收藏的声优</view>
+        </view>
+        <!-- 未登录 -->
+        <view class="boximg" wx:else>
+            <image src="{{collection}}" />
+            <view>您还未收藏声优哦~</view>
+        </view>
+    </view>
+</view>

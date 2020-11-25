@@ -1,0 +1,112 @@
+page {
+    background-color: rgb(245, 245, 245);
+}
+
+.home {
+    padding: 0 20rpx;
+}
+
+.li_box_boy,
+.li_box_girl {
+    padding: 20rpx 30rpx;
+    border-radius: 30rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30rpx;
+}
+
+.li_box_boy {
+    background-image: linear-gradient(to right, #5D76FC, #8859F9);
+}
+
+.li_box_girl {
+    background-image: linear-gradient(to right, #F85FA7, #F349D5);
+}
+
+.box_left {
+    display: flex;
+    align-items: center;
+}
+
+.left_pic {
+    width: 100rpx;
+    height: 100rpx;
+    margin-right: 18rpx;
+}
+
+.left_pic image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.the_name {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 30rpx;
+}
+
+.the_name text {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 340rpx;
+}
+
+.the_name image {
+    width: 25rpx;
+    height: 25rpx;
+    margin-left: 8rpx;
+}
+
+.left_info:not(.the_name) {
+    color: #FFCCE4;
+    font-size: 22rpx;
+}
+
+.music {
+    background-color: white;
+    padding: 12rpx 40rpx;
+    border-radius: 50rpx;
+    display: flex;
+    align-items: center;
+    border: 1rpx solid white;
+}
+
+.music:focus {
+    border: 1rpx solid #eee;
+    padding: 11rpx 38rpx;
+}
+
+.music image {
+    width: 30rpx;
+    height: 30rpx;
+    margin-right: 8rpx;
+}
+
+.music text {
+    color: #908d8d;
+    font-size: 25rpx;
+}
+
+.boximg {
+    margin-top: 250rpx;
+    text-align: center;
+}
+
+.boximg image {
+    width: 250rpx;
+    height: 250rpx;
+}
+
+.boximg view {
+    color: #999999;
+}
+
+.onlytw {
+    text-align: center;
+    font-size: 22rpx;
+    color: gray;
+}

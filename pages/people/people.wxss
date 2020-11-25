@@ -1,0 +1,128 @@
+page {
+    background-color: rgb(245, 245, 245);
+}
+
+.home {
+    padding: 0 20rpx;
+}
+
+.list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30rpx;
+    border-bottom: 1rpx solid #EBEBEB;
+}
+
+.list:last-child {
+    border-bottom: 1rpx solid rgb(245, 245, 245);
+}
+
+.back {
+    background-color: white;
+    border-radius: 30rpx;
+}
+
+.rights,
+.right_car {
+    color: #999;
+    display: flex;
+    align-items: center;
+}
+
+.right_car image {
+    width: 70rpx;
+    height: 70rpx;
+}
+
+.user_photo {
+    width: 120rpx;
+    height: 120rpx;
+    border-radius: 50%;
+}
+
+.the_right {
+    width: 30rpx;
+    height: 40rpx;
+    margin-left: 16rpx;
+}
+
+.login_out {
+    margin-top: 120rpx;
+}
+
+.login_out view {
+    background-color: #DBDBDB;
+    padding: 25rpx 0;
+    width: 100%;
+    color: #333333;
+    border-radius: 20rpx;
+    text-align: center;
+}
+
+.picker {
+    display: flex;
+    align-items: center;
+}
+
+.thedialog {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background-color: rgba(0, 0, 0, .6);
+    display: grid;
+    place-items: center;
+}
+
+.dia_box {
+    background-color: white;
+    border-radius: 30rpx;
+    width: 80%;
+}
+
+.dia_cont {
+    padding: 50rpx 40rpx 0 40rpx;
+}
+
+.dia_top {
+    text-align: center;
+}
+
+.dia_input {
+    padding: 40rpx 0;
+    position: relative;
+}
+
+.dia_input input {
+    padding: 20rpx;
+    background-color: #F5F5F5;
+}
+
+.dia_input image {
+    width: 25rpx;
+    height: 35rpx;
+    position: absolute;
+    top: 42%;
+    right: 0;
+    margin-right: 20rpx;
+    z-index: 10;
+}
+
+.dia_button {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.dia_button text {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    border-top: 1rpx solid #DBDBDB;
+    padding: 30rpx;
+}
+
+.dia_button text:first-child {
+    border-right: 1rpx solid #DBDBDB;
+}

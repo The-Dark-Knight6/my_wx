@@ -1,0 +1,72 @@
+<view class="host">
+    <!-- 导航栏 -->
+    <navigation-bar defaultdata="{{title}}"></navigation-bar>
+    <!-- 内容 -->
+    <view class="home">
+        <view class="back">
+            <!-- 列表 头像 -->
+            <view class='list'>
+                <text>头像</text>
+                <view class="rights">
+                    <image src="{{userInfo.avatarUrl}}" class="user_photo" />
+                    <!-- <image src="{{rights}}" class="the_right" /> -->
+                </view>
+            </view>
+            <!-- 列表 手机号码 -->
+            <view class='list'>
+                <text>手机号码</text>
+                <view class="rights" bindtap="myphone">
+                    <text>{{the_phone}}</text>
+                    <!-- <image src="{{rights}}" class="the_right" /> -->
+                </view>
+            </view>
+            <!-- 列表 昵称 -->
+            <view class='list'>
+                <text>昵称</text>
+                <view class="rights">
+                    <text bindtap='nickname'>{{the_nickname}}</text>
+                    <image src="{{rights}}" class="the_right" />
+                </view>
+            </view>
+            <!-- 列表 性别 -->
+            <view class='list'>
+                <text>性别</text>
+                <view class="rights">
+                    <text bindtap='popSelect'>{{the_sex}}</text>
+                    <image src="{{rights}}" class="the_right" />
+                </view>
+            </view>
+            <!-- 列表 我的汽车 -->
+            <view class='list'>
+                <text>我的汽车</text>
+                <view class="rights">
+                    <view bindtap='tocar' class="right_car">
+                        <image wx:if="{{brand_logo}}" src="{{brand_logo}}" />
+                        <text>{{the_car}}</text>
+                    </view>
+                    <image src="{{rights}}" class="the_right" />
+                </view>
+            </view>
+        </view>
+        <!-- 退出 -->
+        <view class="login_out" bindtap="getout">
+            <view>退出登录</view>
+        </view>
+    </view>
+    <!-- 昵称 弹框 -->
+    <view class="thedialog" wx:if="{{thedia && userdata}}" bindtap="thetap" data-id="the">
+        <view class="dia_box">
+            <view class="dia_cont">
+                <view class="dia_top">修改昵称</view>
+                <view class="dia_input">
+                    <input placeholder="请输入昵称" value="{{input_value}}" maxlength="12" focus bindfocus="input_focus" bindblur="input_blur" bindinput="theinput" />
+                    <image src="{{closebut}}" hidden="{{theclose}}" bindtap="clearall" />
+                </view>
+            </view>
+            <view class="dia_button">
+                <text bindtap="tocancel">取消</text>
+                <text bindtap="tosure">确定</text>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,8 @@
+page {
+    background-color: rgb(245, 245, 245);
+    height: 90%;
+}
+.navs{
+    position: fixed;
+    z-index: 99;
+}

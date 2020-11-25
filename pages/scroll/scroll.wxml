@@ -1,0 +1,6 @@
+<view class="host">
+    <!-- 导航栏 -->
+    <navigation-bar defaultdata="{{title}}" class="navs"></navigation-bar>
+    <!-- 混动 组件 -->
+    <alphabet list="{{list}}" />
+</view>

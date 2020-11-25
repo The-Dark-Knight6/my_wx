@@ -1,0 +1,54 @@
+<!-- index.wxml -->
+<view class="container">
+  <!-- 顶部导航栏 -->
+  <view class="back">
+    <view class="nav-bar" style="height:{{navBarHeight}}px">
+      <view class="search" style="height:{{menuHeight}}px; min-height:{{menuHeight}}px; line-height:{menuHeight}}px; left:{{menuRight}}px; bottom:{{menuBotton}}px;">
+        车载语聊
+      </view>
+    </view>
+  </view>
+  <!-- 获取手机号码 -->
+  <view class="alert" wx:if="{{getnums}}">
+    <view class="phone">
+      <text class="icon-close" bindtap="dont">X</text>
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <view class="bind_phone">绑定手机号</view>
+      <view class="first">请先绑定手机号再进行操作</view>
+      <button open-type="getPhoneNumber" bindgetphonenumber='getphone'>微信用户一键绑定</button>
+    </view>
+  </view>
+  <!-- 内容 -->
+  <view class="host">
+    <!-- 轮播图 -->
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" style="height:350rpx">
+      <block wx:for="{{background}}" wx:key="index">
+        <swiper-item>
+          <view class="swiper-item">
+            <image src="{{item.pic_url}}" bindtap="go_page" data-url="{{item.content}}" />
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+    <!-- 固定图片 -->
+    <view class="banners">
+      <image src="{{blogo}}" bindtap="tothe_newpage" data-url="{{blogo_url}}" />
+    </view>
+    <!-- 扫码按钮 -->
+    <view class="scope">
+      <view class="scope_box">
+        <!-- 未登录 -->
+        <button class="logined" wx:if="{{!device_id && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+          <image src="{{ercode}}" />
+          <text style="font-size:35rpx;color:white;">扫码登录车载设备</text>
+        </button>
+        <!-- 已登录 -->
+        <view wx:else class="nologin" bindtap="toscan">
+          <text style="font-size:35rpx;color:white;">设备已经登录</text>
+          <image src="{{ercode}}" />
+        </view>
+      </view>
+    </view>
+    <!-- <view style="text-align:center;margin-top: 20rpx;color: gray;" wx:if="{{device_id}}">设备号：{{device_id}}</view> -->
+  </view>
+</view>

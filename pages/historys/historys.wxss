@@ -1,0 +1,96 @@
+page {
+    background-color: rgb(245, 245, 245);
+}
+
+.home {
+    padding: 0 20rpx;
+}
+
+.li_box_girl,
+.li_box_boy {
+    padding: 20rpx 30rpx;
+    border-radius: 30rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28rpx;
+}
+
+.li_box_boy {
+    background-image: linear-gradient(to right, #5D76FC, #8859F9);
+}
+
+.li_box_girl {
+    background-image: linear-gradient(to right, #F85FA7, #F349D5);
+}
+
+.box_left {
+    display: flex;
+    align-items: center;
+}
+
+.left_pic {
+    width: 100rpx;
+    height: 100rpx;
+    margin-right: 18rpx;
+}
+
+.left_pic image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.the_name {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 30rpx;
+}
+
+.the_name text {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 230rpx;
+}
+
+.the_name image {
+    width: 25rpx;
+    height: 25rpx;
+    margin-left: 8rpx;
+}
+
+.left_info:not(.the_name) {
+    color: #FFCCE4;
+    font-size: 22rpx;
+}
+
+.box_right {
+    font-size: 20rpx;
+    color: white;
+}
+
+.box_right view::before {
+    content: "·";
+    font-weight: bold;
+    margin-right: 8rpx;
+}
+
+.box_right view {
+    margin-bottom: 5rpx;
+}
+
+.boximg {
+    margin-top: 250rpx;
+    text-align: center;
+}
+
+.boximg image {
+    width: 250rpx;
+    height: 250rpx;
+}
+
+.boximg view {
+    color: #999999;
+}

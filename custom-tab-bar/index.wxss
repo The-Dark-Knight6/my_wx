@@ -1,0 +1,25 @@
+
+.host{
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    border-top: 1rpx solid #ccc;
+    font-size: 25rpx;
+    background-color: white;
+    z-index: -1;
+}
+.tabbox{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 12rpx 0;
+    width: 100%;
+}
+.tabbox image{
+    width: 50rpx;
+    height: 50rpx;
+}
+.tabbox text{
+    margin-top: 1rpx;
+    color: gray;
+}

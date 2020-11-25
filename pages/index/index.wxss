@@ -1,0 +1,160 @@
+page {
+  background-color: rgb(245, 245, 245);
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+.alert {
+  background-color: rgba(0, 0, 0, .8);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  display: grid;
+  place-items: center;
+  z-index: 10;
+}
+
+.phone>button,
+.userinfo>button {
+  margin-top: 15rpx;
+  background-color: #31cc33;
+  color: white;
+  border-radius: 50rpx;
+  font-weight: normal;
+  font-size: 25rpx;
+}
+
+.phone {
+  position: relative;
+  background-color: white;
+  padding: 50rpx;
+  display: grid;
+  place-items: center;
+  border-radius: 20rpx;
+}
+
+.phone>view {
+  margin: 12rpx 0;
+}
+
+.bind_phone {
+  font-weight: bold;
+}
+
+.first {
+  color: #bebebe;
+  font-size: 25rpx;
+}
+
+.back {
+  width: 100%;
+  box-sizing: border-box;
+  height: 180rpx;
+}
+
+.nav-bar {
+  background-color: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  color: black;
+}
+
+.nav-bar .search {
+  width: 95%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.host {
+  padding: 0 5%;
+}
+
+.banners {
+  width: 100%;
+  height: 350rpx;
+  margin: 50rpx 0;
+}
+
+.banners image {
+  width: 100%;
+  height: 100%;
+}
+
+.scope {
+  display: flex;
+  place-items: center;
+  padding: 0 100rpx;
+  margin-top: 70rpx;
+}
+
+.scope_box {
+  background: url('http://test.miudrive.com/images/carchat/buts.png') no-repeat;
+  background-size: 100% 100%;
+  color: white;
+  padding: 40rpx;
+  width: 100%;
+}
+
+.scope_box button {
+  background-color: transparent;
+  font-weight: lighter;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+.nologin {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.logined {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scope_box image {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 15rpx;
+}
+
+.swiper-item,
+.swiper-item image {
+  width: 100%;
+  height: 100%;
+}
+
+.icon-close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 20rpx;
+  color: darkgray;
+}

@@ -1,0 +1,31 @@
+.nav-bar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  color: black;
+  background-color: white;
+}
+
+.nav-bar .search {
+  width: 90%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+}
+
+.icon-arrow-left {
+  height: 20rpx;
+  width: 20rpx;
+  margin: 30rpx 0 0 20rpx;
+  display: inline-block;
+  border-style: solid;
+  border-color: black;
+  border-width: 2px 0 0 2px;
+  -ms-transform: translate(-25%, -50%) rotate(-45deg);
+  transform: translate(-25%, -50%) rotate(-45deg);
+}
+
+.buttons {
+  display: flex;
+  place-items: center;
+}

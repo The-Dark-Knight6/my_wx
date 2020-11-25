@@ -1,0 +1,25 @@
+const app = getApp();
+
+Component({
+    properties: {
+        // defaultData（父页面传递的数据-就是引用组件的页面）
+        defaultdata: {
+            type: String,
+            value: '默认标题',
+            // observer: function (newVal, oldVal) {}
+        }
+    },
+    data: {
+        navBarHeight: app.globalData.navBarHeight,
+        menuRight: app.globalData.menuRight,
+        menuBotton: app.globalData.menuBotton,
+        menuHeight: app.globalData.menuHeight,
+    },
+    attached: function () {},
+    methods: {
+        //返回
+        toback(){
+            wx.navigateBack({});
+        }
+    }
+})
