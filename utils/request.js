@@ -1,14 +1,10 @@
 //请求方法的封装 
 
-// let host = 'https://usertest.didi365.com';
-let host = 'https://user.didi365.com';
-// let order = 'https://ordertest.didi365.com';
-let order = 'https://order.didi365.com';
-let didi = 'https://test.didi365.com'; //这个是获取的车型 测试api和正式api相同
-// let payment = 'https://paymenttest.didi365.com/';
-let payment = 'https://payment.didi365.com/';
-// let cms = 'https://cmstest.didi365.com';
-let cms = 'https://cms.didi365.com';
+let host = 'https';
+let order = 'https';
+let didi = 'https'; //这个是获取的车型 测试api和正式api相同
+let payment = 'https';
+let cms = 'https';
 
 //test为测试接口，没有test为正式接口，可根据开发上线环境更改
 //函数所传参数分别为：请求的接口前缀、接口地址、所传的参数、返回的信息，失败的信息

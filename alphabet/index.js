@@ -39,12 +39,12 @@ Component({
   methods: {
     //调取后台接口 传入所选车型
     postcar(obj) {
-      let url = '/v1/user/car/post',
+      let url = '',
         params = {};
       params = obj;
       params.user_id = this.data.user_id;
       wx.request({
-        url: 'https://usertest.didi365.com' + url,
+        url: 'httpsm' + url,
         data: params,
         method: 'POST',
         success(res) {
